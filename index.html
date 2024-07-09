@@ -1,0 +1,123 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="/src/main.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <a-scene my-scene id="scene">
+    <a-assets>
+      <a-asset-item id="vase" src="assets/models/decorative_vase/scene.gltf"></a-asset-item>
+    </a-assets>
+    <a-camera position="0 0 5">
+      <a-cursor></a-cursor>
+    </a-camera>
+
+    <a-gltf-model src="#vase" position="-195.138 -131.714 8.692" scale="0.5 0.5 0.5">
+      <a-entity interactive-panel class="interactive-panel" position="-87.189 80.982 -146.35765" rotation="0 90 0" scale="2 2 2">
+        <a-box height="100" width="100" depth="1" color="#000" opacity="0.4" transparent="true"></a-box>
+        <a-text class="interactive-panel__question" position="-48 41 1" color="#FFF" value="Want you to burn some incense?" height="100" width="100" scale="1.5 1.5 1.5"></a-text>
+        <a-text class="interactive-panel__option interactive-panel__option--yes" position="-38.019 -32 1" color="#FFF" value="Yes" height="100" width="50" text="height: 200" scale="5 5 5"></a-text>
+        <a-text class="interactive-panel__option interactive-panel__option--no" position="18.85236 -32 1" color="#FFF" value="No" height="100" width="50" text="height: 200" scale="5 5 5"></a-text>
+      </a-entity>
+    </a-gltf-model>
+
+    <a-cone cursor-listener height="60" width="10" radius-top="20" radius-bottom="40" position="12 20 -130" color="#0F0"
+      opacity="0.2" transparent="true">
+      <div class="info-content">
+        <p>Much <a href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Buddhist_art"
+            title="Buddhist art">Buddhist art</a> uses
+          depictions of the historical Buddha, <a
+            href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Gautama_Buddha" class="mw-redirect"
+            title="Gautama Buddha">Gautama Buddha</a>, which are known as <b><span
+              title="International Alphabet of Sanskrit transliteration"><i lang="sa-Latn">Buddharūpa</i></span></b>
+          (<abbr style="font-size:85%" title="literal translation">lit.</abbr><span
+            style="white-space: nowrap;"> </span><span class="gloss-quot">'</span><span class="gloss-text">Form of the
+            Awakened One</span><span class="gloss-quot">'</span>) in <a
+            href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Sanskrit" title="Sanskrit">Sanskrit</a> and <a
+            href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Pali" title="Pali">Pali</a>.
+          These may be statues or other images such as paintings. The main figure in an image may be someone else who
+          has obtained <a href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Buddhahood"
+            title="Buddhahood">Buddhahood</a>, or a <a
+            href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Boddhisattva" class="mw-redirect"
+            title="Boddhisattva">boddhisattva</a>, especially in the various traditions of <a
+            href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Mahayana_Buddhism" class="mw-redirect"
+            title="Mahayana Buddhism">Mahayana Buddhism</a>. Other <a
+            href="https://en.wikipedia.orghttps://en.wikipedia.org/wiki/Buddhas_and_bodhisattvas_in_art"
+            title="Buddhas and bodhisattvas in art">Buddhas and bodhisattvas in art</a> have become increasingly
+          common over the centuries, perhaps now outnumbering images of the historical Buddha.
+        </p>
+      </div>
+    </a-cone>
+    <!-- <a-sphere cursor-listener data-info="child of sphere" position="0 0 -5" radius="1.25"
+      src="assets/images/pexels-kasperphotography-978535.jpg">
+    </a-sphere> -->
+
+    <a-box cursor-listener height="30" width="11" depth="1" color="#f00" position="-75.032 -25.546 -126.141"
+      rotation="-20.288 39.656 2.055" scale="2.446 -1.253 9" opacity="0.2" transparent="true">
+      <div class="info-content">
+        <p><b>Suphankanlaya</b> (<a href="https://en.wikipedia.org/wiki/Thai_language" title="Thai language">Thai</a>:
+          <span lang="th">สุพรรณกัลยา</span>, <span title="International Alphabet of Sanskrit transliteration"><i
+              lang="sa-Latn">Suvarṇakalyā</i></span>; <a href="https://en.wikipedia.org/wiki/Burmese_language"
+            title="Burmese language">Burmese</a>: <span lang="my">ဗြဣန္ဒဒေဝီ</span>) was a 16th-century <a
+            href="https://en.wikipedia.org/wiki/Siam" class="mw-redirect" title="Siam">Siamese</a> princess who was a
+          queen consort of King <a href="https://en.wikipedia.org/wiki/Bayinnaung" title="Bayinnaung">Bayinnaung</a>
+          of <a href="https://en.wikipedia.org/wiki/Toungoo_Dynasty" class="mw-redirect"
+            title="Toungoo Dynasty">Burma</a>. There are very few historical records of her life,
+          but legends about her are widespread in <a href="https://en.wikipedia.org/wiki/Thailand"
+            title="Thailand">Thailand</a>. Many Thais
+          revere her as a national heroine or even as a <a href="https://en.wikipedia.org/wiki/Folk_religion"
+            title="Folk religion">popular
+            deity</a>.
+        </p>
+        <p>She was the daughter of <a href="https://en.wikipedia.org/wiki/Mahathammarachathirat_(king_of_Ayutthaya)"
+            class="mw-redirect" title="Mahathammarachathirat (king of Ayutthaya)">Maha Thammaracha</a>, viceroy of <a
+            href="https://en.wikipedia.org/wiki/History_of_Phitsanulok_Province" class="mw-redirect"
+            title="History of Phitsanulok Province">Phitsanulok</a> and later King of <a
+            href="https://en.wikipedia.org/wiki/Ayutthaya_Kingdom" title="Ayutthaya Kingdom">Ayutthaya</a> and his
+          wife <a href="https://en.wikipedia.org/wiki/Wisutkasat" title="Wisutkasat">Wisutkasat</a>; elder sister of
+          the princes <a href="https://en.wikipedia.org/wiki/Naresuan" title="Naresuan">Naresuan</a> and <a
+            href="https://en.wikipedia.org/wiki/Ekathotsarot" title="Ekathotsarot">Ekathotsarot</a> who later both
+          became kings of Ayutthaya, too. On her maternal side
+          she was a granddaughter of King <a href="https://en.wikipedia.org/wiki/Maha_Chakkraphat"
+            title="Maha Chakkraphat">Chakkraphat</a>
+          and Queen <a href="https://en.wikipedia.org/wiki/Suriyothai" title="Suriyothai">Suriyothai</a>. In 1564, her
+          father became a vassal
+          of King <a href="https://en.wikipedia.org/wiki/Bayinnaung" title="Bayinnaung">Bayinnaung</a> of Pegu in
+          Burma. Her brothers were
+          taken to the Peguan court to serve as pages and guarantee for the loyalty of their father, as was usual at
+          the time.
+        </p>
+      </div>
+    </a-box>
+
+    <a-box cursor-listener position="12.5 -14.5 117" scale="92.5 104.3 9" rotation="20 0 0" color="#f00000"
+      opacity="0.2" transparent="true">
+      <div class="info-content">
+        <p>
+          A deep green jade sitting Buddha at Wat Buppharam in Chiang Mai, Thailand.
+        </p>
+      </div>
+    </a-box>
+
+    <!-- 
+      <a-torus-knot position="-4 0 0" height="3"
+        src="/assets/images/pexels-anniroenkae-2832382.jpg"></a-torus-knot>
+      <a-box cursor-listener data-info="child of box" position="-1 0.5 -3" rotation="0 45 0"
+        src="/assets/images/pexels-fwstudio-33348-129731.jpg">
+      </a-box>
+      <a-cylinder id="cyl" position="1 0.75 -3" radius="0.5" height="1.5" rotation="90 0 0"
+        src="/assets/images/pexels-pixabay-220182.jpg"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"
+        material="side: double"></a-plane>
+    -->
+
+    <a-text id="text-display" position="-2 2 0" color="#F00" value="Wat Bupparam, Chiang Mai, Thailand"></a-text>
+    <a-sky color="#ECECEC" radius="300" src="/assets/images/temple-min.jpeg"></a-sky>
+  </a-scene>
+  <div id="info-container"></div>
+</body>
+
+</html>
