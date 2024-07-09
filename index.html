@@ -15,14 +15,27 @@
       <a-cursor></a-cursor>
     </a-camera>
 
-    <a-gltf-model src="#vase" position="-195.138 -131.714 8.692" scale="0.5 0.5 0.5">
-      <a-entity interactive-panel class="interactive-panel" position="-87.189 80.982 -146.35765" rotation="0 90 0" scale="2 2 2">
-        <a-box height="100" width="100" depth="1" color="#000" opacity="0.4" transparent="true"></a-box>
-        <a-text class="interactive-panel__question" position="-48 41 1" color="#FFF" value="Want you to burn some incense?" height="100" width="100" scale="1.5 1.5 1.5"></a-text>
-        <a-text class="interactive-panel__option interactive-panel__option--yes" position="-38.019 -32 1" color="#FFF" value="Yes" height="100" width="50" text="height: 200" scale="5 5 5"></a-text>
-        <a-text class="interactive-panel__option interactive-panel__option--no" position="18.85236 -32 1" color="#FFF" value="No" height="100" width="50" text="height: 200" scale="5 5 5"></a-text>
-      </a-entity>
-    </a-gltf-model>
+    <a-entity 
+    interactive-model class="interactive-model"
+    position="-437.416 -387.757 28.266"
+    scale="2 2 2"
+    >
+    <a-gltf-model class="interactive-model__model interactive-model__clickon" src="#vase" 
+      position="0 0 0" 
+        scale="0.5 0.5 0.5">
+        <a-light class="interactive-model__light" type="ambient" color="#FFF" intensity="1"></a-light>
+      </a-gltf-model>
+      <a-box class="interactive-model__panel interactive-model__clickswitchable" height="100" width="100" depth="1" color="#000" opacity="0.4"
+      position="-2.625 98 0.610" scale="1 1 1" rotation="0 90 0" visible="false"
+        transparent="true">
+        <a-text class="interactive-model__question" position="-48 19 2.5" color="#FFF"
+          value="Want you to \nburn an incense \nstick?" height="100" width="100" scale="3 3 3"></a-text>
+        <a-text class="interactive-model__option interactive-model__option--yes interactive-model__clickoff" position="-38.019 -32 2.5" color="#FFF"
+          value="Yes" height="100" width="50" text="height: 200" scale="5 5 5"></a-text>
+        <a-text class="interactive-model__option interactive-model__option--no interactive-model__clickoff" position="18.85236 -32 2.5" color="#FFF"
+          value="No" height="100" width="50" text="height: 200" scale="5 5 5"></a-text>
+      </a-box>
+    </a-entity>
 
     <a-cone cursor-listener height="60" width="10" radius-top="20" radius-bottom="40" position="12 20 -130" color="#0F0"
       opacity="0.2" transparent="true">
@@ -115,7 +128,7 @@
     -->
 
     <a-text id="text-display" position="-2 2 0" color="#F00" value="Wat Bupparam, Chiang Mai, Thailand"></a-text>
-    <a-sky color="#ECECEC" radius="300" src="/assets/images/temple-min.jpeg"></a-sky>
+    <a-sky color="#ECECEC" scale="-2 2 2" radius="300" src="/assets/images/temple-min.jpeg"></a-sky>
   </a-scene>
   <div id="info-container"></div>
 </body>

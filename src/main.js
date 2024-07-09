@@ -38,22 +38,51 @@ AFRAME.registerComponent('cursor-listener', {
   }
 });
 
-AFRAME.registerComponent('interactive-panel', {
+// uses event bubbling
+AFRAME.registerComponent('interactive-model', {
   init: function() {
-    [...this.el.querySelectorAll('.interactive-panel__option')].forEach(option => {
-      const originalColor = option.getAttribute('color')
-      option.addEventListener('mouseenter', (e) => {
-        option.setAttribute('color', '#f00')
-      })
+    const light = this.el.querySelector('.interactive-model__light')
+    const originalLightIntensity = light ? light.getAttribute('intensity') : 1
 
-      option.addEventListener('mouseleave', (e) => {
-        option.setAttribute('color', originalColor)
-      })
-    })
+    this.el.addEventListener('mouseenter', (e) => {
+      const {className} = e.target
+      if (className.indexOf('interactive-model__option') !== -1) {
+        e.target.setAttribute('color', '#f00')
+        console.log(e.target.getAttribute('value'))
+      }
 
-    this.el.querySelector('.interactive-panel__option--yes').addEventListener('click', () => {
-      alert('yes')
+      if (className.indexOf('interactive-model__model') !== -1) {
+        console.log('model', light)
+        if (light) light.setAttribute('intensity', 3)
+      }
+    });
+
+    this.el.addEventListener('mouseleave', (e) => {
+      if (light) light.setAttribute('intensity', originalLightIntensity)
+
+      const {className} = e.target
+      if (className.indexOf('interactive-model__option') !== -1) {
+        e.target.setAttribute('color', '#FFF')
+      }
+    });
+
+    this.el.addEventListener('click', (e) => {
+      const {className} = e.target
+      const switchableElements = [...this.el.querySelectorAll('.interactive-model__clickswitchable')]
+
+      if (className.indexOf('interactive-model__clickon') !== -1) {
+        console.log('click on')
+        switchableElements.forEach(element => {
+          element.setAttribute('visible', true)
+        })
+      }
+
+      if (className.indexOf('interactive-model__clickoff') !== -1) {
+        console.log('click off')
+        switchableElements.forEach(element => {
+          element.setAttribute('visible', false)
+        })
+      }
     })
   }
-
 })
